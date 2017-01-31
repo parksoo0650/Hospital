@@ -27,25 +27,38 @@ public class MemberBean { // getter setter abstract 걸 필요 없음 doctor,
 	return name;
     }
 
-    /*
-     * public void setSsn(String ssn) { this.ssn = ssn; }
-     * 
-     * public String getSsn() { return ssn; }
-     * 
-     * public void setPhone(String phone) { this.phone = phone; }
-     * 
-     * public String getPhone() { return phone; }
-     * 
-     * public void setEmail(String email) { this.email = email; }
-     * 
-     * public String getEmail() { return email; }
-     * 
-     * public void setAddr(String addr) { this.addr = addr; }
-     * 
-     * public String getAddr() { return addr; } public void setMajorTreat(String
-     * majorTreat){ this.majorTreat=majorTreat; } public String getMajorTreat(){
-     * return majorTreat; }
-     */
+    public void setSsn(String ssn) {
+	this.ssn = ssn;
+    }
+
+    public String getSsn() {
+	return ssn;
+    }
+
+    public void setPhone(String phone) {
+	this.phone = phone;
+    }
+
+    public String getPhone() {
+	return phone;
+    }
+
+    public void setEmail(String email) {
+	this.email = email;
+    }
+
+    public String getEmail() {
+	return email;
+    }
+
+    public void setAddr(String addr) {
+	this.addr = addr;
+    }
+
+    public String getAddr() { 
+	return addr;
+    }
+
     @Override
     public String toString() {
 	return String.format("%s", name);

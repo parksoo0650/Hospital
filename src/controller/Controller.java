@@ -17,48 +17,40 @@ public class Controller {
 	 */
 
 	HospitalService service = new HospitalServiceImpl();
-	DoctorBean doctor =null;
-	NurseBean nurses = null;
+	MemberBean member=null;
+	
 	PatientBean pat = null;
 	while (true) {
 	    switch (JOptionPane.showInputDialog(Hospital.EXE_OPTION)) {
 	    case "0" : return;
 	    case "1": 
-		/*
-		doctor = new DoctorBean();
-		DoctorBean doctor = new DoctorBean();
+		DoctorBean doctor=new DoctorBean();
 		String docInfo = JOptionPane.showInputDialog(Hospital.DOC_SPEC);
 		String[] docInfoArr = docInfo.split(",");
 		// bmi.name = s.next();
-		doctor.setUid(Integer.parseInt(docInfoArr[0]));
+		doctor.setUid(docInfoArr[0]);
 		doctor.setMajorTreat(docInfoArr[1]);
 		doctor.setName(docInfoArr[2]);
 		doctor.setSsn(docInfoArr[3]);
 		doctor.setPhone(docInfoArr[4]);
 		doctor.setEmail(docInfoArr[5]);
 		doctor.setDocPostion(docInfoArr[6]);
-		JOptionPane.showMessageDialog(null, doctor.toString());*/
+		service.checkInstance(doctor);
+		
 		break;
 	    case "2":
-		nurses = new NurseBean();
+		NurseBean nurses = new NurseBean();
 		String nurInfo = JOptionPane.showInputDialog(Hospital.NUR_SPEC);
 		String[] nurInfoArr = nurInfo.split(",");
 		// bmi.name = s.next();
-		nurses.setUid((nurInfoArr[0]));
-		nurses.setName(nurInfoArr[1]);
-		JOptionPane.showMessageDialog(null, nurses.getUid());
-		/*
-		 * Nurses nurses = new Nurses();
-		 * nurses.setNurName(JOptionPane.showInputDialog("이름?"));
-		 * nurses.setNurGen(JOptionPane.showInputDialog(
-		 * "주민번호(800101-1)?"));
-		 * nurses.setNurEmail(JOptionPane.showInputDialog("이메일?"));
-		 * nurses.setNurPhone(JOptionPane.showInputDialog("전화번호?"));
-		 * JOptionPane.showMessageDialog(null, ("[간호사]" +
-		 * nurses.getNurName() + "[" + nurses.CalcGender() + "]" +
-		 * nurses.CalcAge() + nurses.getNurEmail() +
-		 * nurses.getNurPhone()));
-		 */
+		nurses.setUid(nurInfoArr[0]);
+		nurses.setMajorJob(nurInfoArr[1]);
+		nurses.setName(nurInfoArr[2]);
+		nurses.setSsn(nurInfoArr[3]);
+		nurses.setPhone(nurInfoArr[4]);
+		nurses.setEmail(nurInfoArr[5]);
+		nurses.setNurPostion(nurInfoArr[6]);
+		service.checkInstance(nurses);
 		break;
 	    case "3":
 		pat = new PatientBean();

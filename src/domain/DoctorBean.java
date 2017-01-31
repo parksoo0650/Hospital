@@ -29,6 +29,7 @@ public class DoctorBean extends MemberBean {
 	return profileImg;
     }
 
+
     /*
      * public void setDocId(int docId) { this.docId = docId; }
      * 
